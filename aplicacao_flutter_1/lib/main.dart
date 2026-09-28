@@ -34,13 +34,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Vorcaro Bank'),
+        backgroundColor: Colors.yellow,
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(color: Colors.purple,
+              decoration: BoxDecoration(color: Colors.orange,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -237,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Text(
-                      "Realize um pagamento via PIX",
+                      "Faz o pix aí, Chave: +5586981287365",
                       style: TextStyle(
                         fontSize: 14, 
                         color: Colors.grey,
@@ -248,10 +249,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             )
           ),
+          Positioned(
+            top: 80,
+            right: 20,
+            child: Row(
+              children: [
+                Image.network('https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/vector-icons-7/pokeball-xeg9gc4xzwluseur3c3mm.png/pokeball-qdt0o2i0d34nyhk4opt88.png?_a=DATAiZAAZAA0'),
+              ],
+            )
+          ),                
           ], 
-        ),
-        
-      
+        ),  
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
