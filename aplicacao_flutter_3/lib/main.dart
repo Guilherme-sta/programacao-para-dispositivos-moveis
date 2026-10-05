@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
               double? gasolina = double.tryParse(_textEditingControllerGasolina.text.replaceAll(',','.'));
               double? alcool = double.tryParse(_textEditingControllerAlcool.text.replaceAll(',','.'));
 
-              if (gasolina == null || alcool == null) {
+              if (gasolina == null || alcool == null || gasolina <= 0 || alcool <= 0) {
               setState(() {
                 resultado = 'Digite valores adequados';
                 corResultado = Colors.red;
