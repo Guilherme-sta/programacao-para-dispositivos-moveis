@@ -88,6 +88,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
           const SizedBox(height: 20),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
             onPressed: () {
               double? gasolina = double.tryParse(_textEditingControllerGasolina.text.replaceAll(',','.'));
               double? alcool = double.tryParse(_textEditingControllerAlcool.text.replaceAll(',','.'));
